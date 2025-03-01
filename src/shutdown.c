@@ -77,7 +77,7 @@ static void seed_rng_device() {
         return;
     }
 
-    int fd = open("/usr/lib/hummingbird/random.seed", O_WRONLY | O_CREAT, 0600);
+    int fd = open("/var/lib/hummingbird/random.seed", O_WRONLY | O_CREAT, 0600);
 
     if (fd < 0)
         return;

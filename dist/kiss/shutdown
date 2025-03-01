@@ -7,7 +7,7 @@ for file in /etc/hummingbird.d/*.pre.shutdown /etc/rc.d/*.pre.shutdown; do
 done
 
 rm -r /tmp/*
-dd count=1 bs=512 if=/dev/random of=/usr/lib/hummingbird/random.seed
+dd count=1 bs=512 if=/dev/random of=/var/lib/hummingbird/random.seed
 
 # killall processes
 

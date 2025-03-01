@@ -9,7 +9,7 @@ hummingbird: src/signal.c src/shutdown.c src/init.c src/hummingbird.c
 
 install: hummingbird
 	mkdir -p "$(DESTDIR)/usr/lib/hummingbird"
-	dd count=1 bs=512 if=/dev/urandom of="$(DESTDIR)/usr/lib/hummingbird/random.seed"
+	dd count=1 bs=512 if=/dev/urandom of="$(DESTDIR)/var/lib/hummingbird/random.seed"
 
 	$(INSTALL) hummingbird "$(DESTDIR)/usr/bin/hummingbird"
 	$(INSTALL) bin/shutdown "$(DESTDIR)/usr/bin/shutdown"

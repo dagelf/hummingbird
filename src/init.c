@@ -43,7 +43,7 @@ static void mount_pseudo_filesystems() {
 static void seed_rng_device() {
     void *seed;
     struct stat status;
-    int fd = open("/usr/lib/hummingbird/random.seed", O_RDONLY);
+    int fd = open("/var/lib/hummingbird/random.seed", O_RDONLY);
 
     if (fd < 0 || fstat(fd, &status) < 0)
         return;
